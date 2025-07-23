@@ -20,7 +20,7 @@
             <a href="register.jsp" class="btn btn-success btn-lg px-5 mb-3">
                 </i>Ir al Registro
             </a>
-            <p class="mt-3">¿Ya tienes cuenta? <a href="login.jsp" class="text-decoration-none">Inicia sesión</a></p>
+            <p class="mt-3">¿Ya tienes cuenta? <a href="Login.jsp" class="text-decoration-none">Inicia sesión</a></p>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
