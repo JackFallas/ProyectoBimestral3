@@ -1,4 +1,4 @@
---  drop database if exists ProyectoBimestralDB;
+drop database if exists ProyectoBimestralDB;
 create database ProyectoBimestralDB;
 use ProyectoBimestralDB;
 
@@ -6,12 +6,14 @@ create table Usuarios(
 	codigoUsuario int auto_increment,
     nombreUsuario varchar(64) not null,
     apellidoUsuario varchar(64) not null,
-    email varchar(128) not null,
-    contraseñaUsuario varchar(64) not null,
     telefono varchar(16) not null,
 	direccionUsuario varchar(128) not null,
+    email varchar(128) not null,
+    contrasena varchar(64) not null,
     constraint pk_usuarios primary key (codigoUsuario)
 );
+
+select * from Usuarios;
 
 create table Marcas(
 	codigoMarca int auto_increment,
@@ -95,12 +97,13 @@ delimiter $$
 				U.nombreUsuario as NOMBRE,
 				U.apellidoUsuario as APELLIDO,
 				U.email,
-				U.contraseñaUsuario as CONTRASENA, 
+				U.contrasena as CONTRASENA, 
 				U.telefono,
 				U.direccionUsuario as DIRECCION
 			from Usuarios U;
 		end$$
 delimiter ;
+call sp_ListarUsuarios;
 
 -- Agregar Usuario
 delimiter $$
